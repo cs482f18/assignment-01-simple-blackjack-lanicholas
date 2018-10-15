@@ -31,11 +31,13 @@ public class GameActivity extends AppCompatActivity {
     /** the game currently being player */
     private Game game;
 
-    /** Starts the game and deals cards to the player and dealer.
-     * Displays the cards and the points of the dealer's and player's hands
+    /** 
+    * Starts the game and deals cards to the player and dealer.
+    * Displays the cards and the points of the dealer's and player's hands
     * @TargetApi(Build.VERSION_CODES.M)
-    * @Override
+    *  -- @Override -- Need to be outside the comment section
     */
+    @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
       //  Resources res = getResources();
@@ -68,7 +70,7 @@ public class GameActivity extends AppCompatActivity {
         dc1.setImageResource(findCardImg(dCards.get(0)));
         dc2.setImageResource(findCardImg(dCards.get(1)));
 
-
+        // You should write some inline comments as well
         if(game.checkWin(player) && game.checkWin(dealer))
         {
             TextView winner = (TextView) findViewById(R.id.winnerTextView);
@@ -102,6 +104,7 @@ public class GameActivity extends AppCompatActivity {
 
         Button hit = (Button) findViewById(R.id.hitButton);
         hit.setOnClickListener(new View.OnClickListener() {
+            
             @Override
             public void onClick(View v) {
                 game.hit();
@@ -174,7 +177,8 @@ public class GameActivity extends AppCompatActivity {
         });
     }
 
-    /** Determines if the dealer should hit or stand and if he
+    /** 
+     * Determines if the dealer should hit or stand and if he
      * hits, the card added to the hand is displayed
      * @param dealer the hand of the dealer
      */
@@ -216,10 +220,12 @@ public class GameActivity extends AppCompatActivity {
         stand.setOnClickListener(null);
     }
 
-    /** Gets the image associated with the card
+    /**
+     * Gets the image associated with the card
      * @param card the card whose image we are finding
      * @return an int that represent the image of the card
      */
+    // You should code it as a nested switch-case. Would be lot cleaner code
     public int findCardImg(Card card)
     {
 
