@@ -152,10 +152,11 @@ public class Stack {
         return topCard;
     }
 
-    /** Shuffles the cards in the stack by randomly rearranging them
-     */
+    /** 
+      * Shuffles the cards in the stack by randomly rearranging them
+      */
     public void shuffle(){
-
+        // You could simply use Collections.shuffle(cards);
         for(int i = 0; i < 51; i++)
         {
             Random r = new Random();
