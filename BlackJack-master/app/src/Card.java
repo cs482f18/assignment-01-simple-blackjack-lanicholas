@@ -2,11 +2,12 @@ package lanicholas.loyola.edu.blackjack;
 
 import android.widget.ImageView;
 
-/** A class representing a card
+/** 
+ * A class representing a card
  *
  *  @author Lillian Nicholas
- *  @version 1.0 (10/6/18)
- *  @since version 0.0
+ *  @version 1.0 10/6/18 // Don't need the ()
+ *  @since version 0.0 // @since should be 1.0 in this case. It stands for in which release was this class added
  */
 public class Card {
 
@@ -19,7 +20,8 @@ public class Card {
     /** The face value / rank of the card */
     private String value;
 
-    /** Create a new Card object
+    /** 
+     * Create a new Card object
      * @param suit the suit of the card
      * @param value the face value of the card
      * @param points the point value associated with the card
@@ -37,8 +39,11 @@ public class Card {
         return points;
     }
 
-    /** Sets the point value of a card
+    /** 
+     * Sets the point value of a card
      * @param p the new point value of the card
+     * -- Try avoiding this setter method as you have the constructor to set the value
+     * -- You probably don't 
      */
     public void setPoints(int p){
         points = p;
