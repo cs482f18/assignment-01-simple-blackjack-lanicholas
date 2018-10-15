@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 import lanicholas.loyola.edu.blackjack.Card;
 
-/** A class representing a hand of cards
+/** 
+ * A class representing a hand of cards
  *
- *  @author Lillian Nicholas
- *  @version 1.0 (10/6/18)
- *  @since version 0.0
+ * @author Lillian Nicholas
+ * @version 1.0 10/6/18
  */
 public class Hand {
 
